@@ -69,6 +69,56 @@ function App() {
   );
 }
 
+// //////////////////REGISTER PAGE////////////
+// function RegisterPage() {
+//   const navigate = useNavigate();
+
+//   const [user, setUser] = useState('');
+//   const [pass, setPass] = useState('');
+  
+
+//   const doRegister = () => {
+//     axios.post('http://localhost:3003/register', { user, pass }).then((res) => {
+//       if ('ok' === res.data.msg) {
+//         login(res.data.key);
+//         navigate('/', { replace: true });
+//       }
+//     });
+//   };
+//   return (
+//     <>
+//       <div className='login'>
+//         <h2 className='heading'>CREATE ACCOUNT</h2>
+//         <div className='label'>
+//           Name:
+//           <input
+//             type='text'
+//             value={user}
+//             onChange={(e) => setUser(e.target.value)}
+//           />
+//         </div>
+       
+//         <div className='label'>
+//           Password:
+//           <input
+//             type='password'
+//             value={pass}
+//             onChange={(e) => setPass(e.target.value)}
+//           />
+//         </div>
+//         <button
+//           onClick={doRegister}>
+//           Register
+//         </button>
+//         <Link
+//           to='/login'
+//           className='link'>
+//           Login
+//         </Link>
+//       </div>
+//     </>
+//   );
+// }
 
 
 function LoginPage() {
@@ -86,10 +136,11 @@ function LoginPage() {
     });
   };
   return (
+    
     <div className="container login-container">
     <div className="row">
       <div className="col-12 login-form">
-        <h2>Welcome</h2>
+        <h2>Welcome!</h2>
     <div className="login">
       <div>Username: <input className="input" type="text" value={user} onChange={e => setUser(e.target.value)}></input></div>
       <div>Password: <input className="input" type="password" value={pass} onChange={e => setPass(e.target.value)}></input></div>

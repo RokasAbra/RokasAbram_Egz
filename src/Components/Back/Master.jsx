@@ -1,7 +1,7 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext,  } from "react";
 import BackContext from "./BackContext";
 
-function Idea({master}) {
+function Master({master}) {
 
     const { setDeleteMaster, setModalMaster,  } = useContext(BackContext);
 
@@ -65,4 +65,4 @@ const handleEdit = () => {
     );
 }
 
-export default Idea;
+export default Master;

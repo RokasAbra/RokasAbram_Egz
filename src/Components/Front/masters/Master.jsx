@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { useContext } from "react";
-import FrontContext from "../FrontContext";
+
 
 function Master({master}) {
 
-    const {  masters } = useContext(FrontContext);
+    
 
-    const [name, setName] = useState('');
+ 
     // const [donation, setDonation] = useState('0');
 
 //     const handleDonate = () => {

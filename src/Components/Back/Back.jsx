@@ -58,7 +58,7 @@ function Back({ show }) {
     if (null === editMaster) return;
     axios
       .put(
-        "http://localhost:3005/admin/master/" + editMaster.id,
+        "http://localhost:3005/admin/master" + editMaster.id,
         editMaster,
         authConfig()
       )

@@ -8,7 +8,7 @@ function SortFilter() {
 
     const [s, setS] = useState('');
 
-    const [currency, setCurrency] = useState('USD');
+
 
     
     const doSearch = e => {
@@ -50,14 +50,14 @@ function SortFilter() {
     return (
         <div className="card mt-4">
             <div className="card-header">
-                <h2>Sort and Filter</h2>
+                <h2>Filtravimas</h2>
             </div>
             <div className="card-body">
                 <div className="container">
                     <div className="row">
                         <div className="col-4">
                             <div className="form-group">
-                                <label>Sort By</label>
+                                <label>Rusiuoti pagal:</label>
                                 <select className="form-control" value={sortBy} onChange={doSort}>
                                     <option value="default">Default Sort</option>
                                     <option value="ascName">A-Z</option>
@@ -78,7 +78,7 @@ function SortFilter() {
                         </div>
                         <div className="col-4">
                             <div className="form-group">
-                                <label>Search</label>
+                                <label>Paieska</label>
                                 <input className="form-control" type="text" value={s} onChange={doSearch} />
                             </div>
                         </div>

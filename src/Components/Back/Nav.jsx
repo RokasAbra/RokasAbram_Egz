@@ -13,7 +13,7 @@ function Nav() {
                             color: 'crimson'
                         } : undefined
                         }>Pagrindinis</NavLink>
-                        <Link className="nav-link" to="/logout">Logout</Link>
+                        <Link className="nav-link" to="/logout">Atsijungti</Link>
                     </nav>
                 </div>
             </div>
