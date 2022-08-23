@@ -3,7 +3,7 @@ import BackContext from "./BackContext";
 
 function Idea({master}) {
 
-    const { setDeleteMaster, setEditMaster,  } = useContext(BackContext);
+    const { setDeleteMaster, setModalMaster,  } = useContext(BackContext);
 
     
 
@@ -29,7 +29,10 @@ function Idea({master}) {
 //   setEditIdea(data);
 //   setAcceptIdea(null);
 // }
-
+const handleEdit = () => {
+    setModalMaster(master);
+    console.log(master);
+}
     const handleDelete = () => {
         setDeleteMaster(master);
         // console.log(idea)
@@ -54,6 +57,7 @@ function Idea({master}) {
               
                 </div>
                 <div className="buttons">
+                <button type="button" className="btn btn-outline-success ml-2" onClick={handleEdit}>Edit</button>
                     <button type="button" className="btn btn-outline-danger ml-2" onClick={handleDelete}>Ištrinti</button>
                 </div>
             </div>

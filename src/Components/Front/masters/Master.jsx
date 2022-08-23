@@ -52,7 +52,7 @@ function Master({master}) {
                             </div> : null) : null
                     } */}
                 </div>
-                <button className="rating">Heart</button>
+                <button type="button" class="btn btn-outline-primary rating">Patinka</button>
                 
 
             </div>

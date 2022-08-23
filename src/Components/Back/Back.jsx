@@ -5,6 +5,7 @@ import Nav from "./Nav";
 import ListIdeas from "./List";
 import { authConfig } from "../../Functions/auth";
 import Create from "./Create";
+import Edit from "./Edit";
 
 function Back({ show }) {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
@@ -36,7 +37,7 @@ function Back({ show }) {
       });
   }, [createMaster]);
 
-  // DELETE IDEA
+  // DELETE 
   useEffect(() => {
     if (null === deleteMaster) return;
     axios
@@ -52,12 +53,12 @@ function Back({ show }) {
         // showMessage({ text: error.message, type: "danger" });
       });
   }, [deleteMaster]);
-
+//Edit
   useEffect(() => {
     if (null === editMaster) return;
     axios
       .put(
-        "http://localhost:3005/admin/master" + editMaster.id,
+        "http://localhost:3005/admin/master/" + editMaster.id,
         editMaster,
         authConfig()
       )
@@ -92,6 +93,7 @@ function Back({ show }) {
 
               <div className="row"></div>
             </div>
+            <Edit></Edit>
           </div>
         </>
       ) : null}
